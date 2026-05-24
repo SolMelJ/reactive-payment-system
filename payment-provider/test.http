@@ -1,0 +1,37 @@
+### Отправка платежа в формате JSON
+POST http://localhost:8080/api/payments/set
+Content-Type: application/json
+
+{
+  "paymentNumber": "PAY-2026-007",
+  "amount": 96000.00,
+  "transactionDate": "2026-05-22",
+  "customerName": "Petr I"
+}
+
+
+### Отправка платежа в формате XML
+POST http://localhost:8080/api/payments/set
+Content-Type: application/xml
+
+<PaymentDTO>
+    <paymentNumber>PAY-2026-XML-006</paymentNumber>
+    <amount>99000.00</amount>
+    <transactionDate>2026-05-22</transactionDate>
+    <customerName>Kot V Sapogah</customerName>
+</PaymentDTO>
+
+
+### Отправка платежа в формате XML
+POST http://localhost:8080/api/payments/set
+Content-Type: application/xml
+
+<PaymentDTO>
+    <paymentNumber>PAY-2026-XML-006</paymentNumber>
+    <amount>99000.00</amount>
+    <transactionDate>2026-05-22</transactionDate>
+    <customerName>Kot V Sapogah</customerName>
+</PaymentDTO>
+
+### Проверка статуса платежа в Сервисе Б
+GET http://localhost:8081/api/consumer/payments/check/8
